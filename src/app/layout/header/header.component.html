@@ -1,0 +1,64 @@
+
+<nav class="navbar navbar-expand-md navbar-light ">
+  <div class="container-fluid nav-con">
+    <div class="logoo">
+      <span><img src="../../../assets/img/img.png" id="imgg"></span>
+
+    <a class="navbar-brand" id="mybrand" href="#">Rubabicia</a>
+  </div>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <li class="nav-item nav-icon">
+          <a class="nav-link active home-color" aria-current="page" routerLink="">Home</a>
+        </li>
+
+        <li class="nav-item nav-icon ">
+          <a [routerLink]="['fav',senderID]" *ngIf="loggedin()"><i class="fa fa-heart-o user-ii" alt="Add to favourits"></i></a>
+        </li>
+        <li class="nav-item nav-icon ">
+          <a [routerLink]="['nof',senderID]" class="position-relative" *ngIf="loggedin()"><i class="bi bi-bell-fill user-ii "></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" *ngIf="counter">
+              {{counter}}
+              <span class="visually-hidden">New alerts</span>
+            </span></a>
+        </li>
+
+
+
+
+
+         <li class="nav-item nav-icon">
+
+            <a class="word" [routerLink]="['profile',senderID]" *ngIf="loggedin()">
+              <div class="nav-it">
+                  <i class="fa fa-user user-i"></i>
+                  <h6>MyAccount</h6>
+              </div>
+
+            </a>
+        </li>
+
+        <li class="nav-item nav-icon ">
+          <a class="nav-link active home-color" aria-current="page" *ngIf="!loggedin()" routerLink="register">Register</a>
+        </li>
+
+         <li class="nav-item nav-icon " >
+          <a class="nav-link active home-color" aria-current="page" *ngIf="!loggedin()" routerLink="login" >Login</a>
+        </li>
+       <li class="nav-item nav-icon " id="logout"  >
+          <a class="nav-link active home-color" aria-current="page" *ngIf="loggedin()" (click)="logout()">Logout</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+

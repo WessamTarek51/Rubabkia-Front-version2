@@ -1,0 +1,28 @@
+<div style="min-height: 100vh; position: relative; ">
+    <div class="container">
+
+    <div class="container-fluid"  *ngFor="let item of notifi" >
+    
+        <div class="row mt-5 mx-3 mb-3 me-auto" style="background-color:#ACB992">
+    
+    <div class="col-12 px-5  pt-3 pb-3"   >
+    <div class="d-flex align-items-center">
+      <div class="flex-shrink-0">
+        <img src="http://127.0.0.1:8000/public/products/{{item.image}}" width="100px" height="100px" class="rounded-circle me-2" alt="...">
+      </div>
+      <div class="flex-grow-1 ms-3" >
+        <strong class="me-auto" style="padding-right: 10px;">{{item.buyer_name}}</strong>
+        <button type="button" class="bb btn" [routerLink]="['/user/',item.user_id]" > Profile</button>
+        <br>
+        Asked to buy your {{item.name}}
+      </div>
+      <div class="float-end">
+        <button type="button" class="btn btn-primary btn-md" (click)="accept(item,seller)" style="background-color:  #464E2E; border-color: #464E2E ; margin-right: 20px;"><i class="fa fa-check" aria-hidden="true"></i>Accept</button>
+        <button type="button" class="btn btn-danger btn-md" (click)="reject(item.id_not,seller)"> <i class="fa fa-ban"></i>Reject </button>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>

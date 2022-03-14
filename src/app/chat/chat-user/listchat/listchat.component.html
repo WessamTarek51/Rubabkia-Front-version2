@@ -1,0 +1,44 @@
+
+<!-- <h1>Chat List</h1>
+<div *ngIf="users" >
+<div *ngFor="let user of users" >
+  <button (click)="onChatClick(user.id)">
+{{user.name}}
+</button>
+</div>
+</div> -->
+<app-loading *ngIf="showSppiner" ></app-loading>
+<div class="container" style="min-height: 100vh; position: relative; ">
+  <br>
+  <h2>Chat List</h2>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="main-box clearfix">
+			<div class="table-responsive">
+        <div *ngIf="users" >
+
+				<table class="table user-list">
+					<thead>
+				<tr>
+							<th><span>User</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let user of users">
+							<td>
+								<img src="http://127.0.0.1:8000/storage/images/{{user.image}}" alt="">
+                <button  (click)="onChatClick(user.id)" style="border: none; background-color: #ACB992; ">	
+                  <h1 style="font-size: 25px;"  >{{user.name}}</h1>
+                </button>
+
+							</td>
+						</tr>	
+					</tbody>
+				</table>
+        </div>
+			</div>
+	
+		</div>
+	</div>
+</div>
+</div>

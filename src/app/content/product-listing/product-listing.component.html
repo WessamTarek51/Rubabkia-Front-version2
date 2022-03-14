@@ -1,0 +1,37 @@
+<br>
+<div class="products">
+    <div class="small-container">
+      <h2>Products</h2>
+
+      <div class="row">
+        <div class="mynewform">
+        <input  id="mybtn" #seacrhInput class="me-2" [(ngModel)]="searchText" type="search" placeholder="Search by name or your limited price" #tagInput (keyup)="(search())" (keydown)="(searchas())" aria-label="Search">
+        <button class="btn btn-outline-success"   id="search" (click)="search()">Search</button>
+
+      </div>
+      <div class="col-md-3 col-sm-6" *ngFor="let product of productData | paginate:{itemsPerPage:8,currentPage:page,totalItems:totalLength}" >
+        <img src="http://127.0.0.1:8000/public/products/{{product.image}}" style="height:250px!important;width:100%!important;" />
+
+        <h4>{{product.name}}</h4>
+        <div class="pri-ic">
+          <p>{{product.price}}</p>
+          <div class="overlay-iconss">
+            <a [routerLink]="['show',product.id]" style="--i:1"><i class="fa fa-eye"></i></a>
+             <a style="--i:3" ><i   [ngClass]="{'bi bi-suit-heart-fill':product.isFav,'bi bi-suit-heart':!product.isFav}" (click)="changFav(product)"></i> </a>
+             <!-- <a [routerLink]="['profile',product.id]"  (click)="AddPruchases(product)"><i class="bi bi-bag-check-fill"></i></a> -->
+             <a   (click)="buyProduct(product)"><i class="bi bi-bag-check-fill"></i></a>
+
+         </div>
+         <!-- <i class="bi bi-suit-heart"></i> -->
+         <!-- <i class="bi bi-suit-heart-fill"></i> -->
+        </div>
+      </div>
+    </div>
+<!-- -----------------pagination---------- -->
+<div class="paging">
+<pagination-controls class="page-item" (pageChange)="page = $event"></pagination-controls>
+</div>
+
+  </div>
+
+</div>

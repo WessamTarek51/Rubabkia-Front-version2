@@ -1,0 +1,249 @@
+html *{
+  -webkit-font-smoothing: antialiased;
+}
+.page-header {
+  height: 50vh;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  align-items: center;
+}
+
+.header-filter:after, .header-filter:before {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+}
+
+.header-filter::before {
+  background:  #474F2F;
+}
+
+.main-raised {
+  margin: -60px 30px 0;
+  border-radius: 6px;
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+}
+
+.main {
+  background: #FFF;
+  position: relative;
+  z-index: 3;
+}
+
+.profile-page .profile {
+  text-align: center;
+}
+
+.profile-page .profile img {
+  max-width: 160px;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-transform: translate3d(0,-50%,0);
+  -moz-transform: translate3d(0,-50%,0);
+  -o-transform: translate3d(0,-50%,0);
+  -ms-transform: translate3d(0,-50%,0);
+  transform: translate3d(0,-50%,0);
+}
+
+.img-raised {
+  box-shadow: 0 5px 15px -8px rgba(0,0,0,.24), 0 8px 10px -5px rgba(0,0,0,.2);
+}
+
+.rounded-circle {
+  border-radius: 50%!important;
+}
+
+.img-fluid, .img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  min-height: 32px;
+  color:  #474F2F;
+  font-weight: 700;
+  font-family: "Roboto Slab","Times New Roman",serif;
+}
+
+.profile-page .descripti{
+  margin: 1.071rem auto 0;
+  max-width: 600px;
+  color: #999;
+  font-weight: 300;
+}
+
+
+.tab-space {
+  padding: 20px 0 50px;
+}
+
+.profile-page .gallery {
+  margin-top: 3.213rem;
+  padding-bottom: 50px;
+}
+
+.profile-page .gallery img {
+  width: 100%;
+  margin-bottom: 2.142rem;
+}
+.profile .name{
+  margin-top: -80px;
+}
+
+img.rounded {
+  border-radius: 6px!important;
+}
+.colorButton{
+background-color: #474F2F;
+color: whitesmoke;
+border: none;
+border-radius: 4px;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+}
+.checked {
+  color: orange;
+}
+.icon-padding{
+    padding-right: 10px;
+}
+
+.bb{
+  display: inline-block;
+  background-color: #474F2F;
+  color: #fff;
+  padding: 8px 35px;
+  border-radius: 10px;
+  margin-right: 30px;
+  }
+  .mynewform{
+    display: flex;
+}
+#mybtn{
+    width: 80%;
+}
+#mybtn:focus{
+    border: 0.1rem solid #3f4b26;
+}
+#search{
+    width: 20%;
+}
+.show-for-sr{
+
+background-color: #474F2F !important;}
+
+
+
+.col-md-3{
+    /* flex-basis: 25%; */
+    /* min-width: 300px; */
+    margin-bottom: 50px;
+    padding: 10px;
+    transition: transform 0.5s;
+
+
+}
+.col-md-3 img{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+.col-md-3:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+.overlay-iconss{
+    /* align-items: flex-start; */
+    text-align: right;
+    justify-content: right;
+    font-size: 15px;
+    color: #000;
+    padding-left: 140px;
+
+}
+.overlay-iconss i{
+    /* color: #000; */
+    color: #474F2F;
+
+}
+.pri-ic{
+    display: flex;
+
+}
+.overlay-icons button{
+    width: 35%;
+    font-size: 12px;
+    height: 7vh;
+    background-color: black;
+    color: cornsilk;
+    margin: 0 10px;
+    padding-bottom: 10px;
+    border-radius: 10%;
+}
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col6{
+        flex-basis: 100%;
+    }
+}
+
+
+
+.products{
+    color: #474F2F;
+}
+/*
+.overlay-icons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+
+/* } */
+/* .overlay a{
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+    background: #fff;
+    color: #666;
+    margin: 1rem;
+    transform: translateY(-15rem);
+} */
+/*
+.overlay a:hover{
+    color: var(--blue);
+} */
+
+
+
+/* .page-item{
+    height: 50%;
+} */
+.pagination li a{
+    color: #3f4b26;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}

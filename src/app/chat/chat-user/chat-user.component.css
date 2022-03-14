@@ -1,0 +1,47 @@
+a.nav-link {
+    color: #ACB992;
+    font-size: 18px;
+    padding: 0;
+}
+a.nav-link:hover{
+    color: white;
+
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid yellow;
+    padding: 2px;
+    flex: none;
+}
+
+input:focus {
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+.card-text {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+
+.chat-header{
+max-width:400px;
+}
+.chat-header-color{
+    background-color: #474F2F;
+}
+.image-chat{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid yellow;
+    padding: 2px;
+}
+.mgOne{
+    height: 500px;
+    overflow: auto;
+    background-color: #ACB992;
+}

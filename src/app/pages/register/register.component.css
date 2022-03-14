@@ -1,0 +1,27 @@
+.btn1:hover{
+    background-color: #dc3545;
+    color:white !important;
+    }.btn2:hover{
+        background-color: #3b5998;
+        color:white !important;
+        }
+    .btn3:hover{
+            background-color: #1da1f2;
+            color:white !important;
+            }
+    .btn{
+        background-color: #f3f5f9;
+        color:#f3f5f9 !important;
+    }
+    .form-check-input:checked{
+        background-color: #464E2E  !important;
+    }
+    #first{
+        background-color: #ACB992 !important;
+    }
+    .input-group-text{
+        background-color:#464E2E !important;
+        color:white;
+         height: 40px;
+    }
+    

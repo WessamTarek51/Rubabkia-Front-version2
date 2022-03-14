@@ -1,0 +1,113 @@
+nav{
+    background-color: #474F2F;
+    color: #fff;
+
+    /* position: fixed; */
+}
+.logoo{
+    display: flex;
+    padding-right: 30px;
+    padding-left: 40px;
+
+}
+ul{
+    padding-right: 70px;
+}
+
+#imgg{
+    width: 70px;
+    /* color: #fff; */
+}
+.navbar-brand{
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+.d-flex{
+    width: 50%;
+    color: #fff;
+}
+#search-word{
+    color: #fff;
+}
+
+
+.navbar-brand:hover{
+    color: #6b7943;
+}
+
+
+.navbar-brand{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 40px;
+}
+#mybrand{
+    font-size: 25px;
+    color: white;
+}
+.nav-icon{
+    font-size: 20px;
+    margin: auto;
+    padding-left: 50px;
+   
+}
+
+.nav-color{
+    font-size: 20px;
+    width: 20%;
+
+} 
+.word{
+    text-decoration: none;
+    color: #fff;
+}
+.nav-it{
+    padding-top: 10px;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+
+    
+    /* justify-content: center; */
+    
+}
+.nav-it h6{
+     text-decoration: none;
+}
+.home-color{
+    color: white !important;
+}
+
+.user-i{
+    padding-right: 10px;
+    color: #fff;
+    
+}
+.user-ii{
+    /* padding-right: 10px; */
+    color: #fff;
+    
+}
+.wishlist {
+    background-color: #fff;
+    border-color: #ff7676
+}
+
+.wishlist:hover {
+    background-color: #e86464;
+    border-color: #e86464;
+    color: #fff
+}
+
+ .wishlist:hover i {
+    color: #fff
+}
+
+.wishlist i {
+    color: #ff7676
+}
+#logout{
+    cursor: pointer;
+}

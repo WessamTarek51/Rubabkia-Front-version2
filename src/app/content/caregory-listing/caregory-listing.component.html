@@ -1,0 +1,19 @@
+<div class="categories">
+  <div class="small-container">
+      <div class="category-down">
+     <h1>Category</h1>
+     </div>
+     <div class="row">
+         <div class="col-4" *ngFor="let category of category| paginate:{itemsPerPage:6,currentPage:page,totalItems:totalLength}" style="height:250px!important;width:100%!important;" >
+          <img src="../../../assets/img/{{category.image}}" class="imgss" />
+           <a  [routerLink]="['category',category.id]"><h3>{{category.name}}</h3></a>
+           <!-- <button (click)="successNotification()">Sucess Notification</button>
+           <button (click)="alertConfirmation()">Show me Confirmation</button> -->
+         </div>
+        <!-- <div class="paging">
+          <pagination-controls class="page-item" (pageChange)="page = $event"></pagination-controls>
+        </div> -->
+    </div>
+
+  </div>
+</div>

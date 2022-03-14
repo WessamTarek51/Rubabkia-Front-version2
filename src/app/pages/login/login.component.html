@@ -1,0 +1,74 @@
+<div class="container log">
+    
+ <div class="row  mt-5 d-flex justify-content-center px-5"  style=" color:white;">
+
+    <div class="row" style="height: 10vh;"></div>
+       
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-10 col-10" style="background-color:#ACB992;color:#464E2E;border-radius:10px;padding: 20px;" >
+            <h3>Sign in</h3>
+            <p>With social account:
+                 <button type="button" class="btn btn1" data-bs-toggle="tooltip" data-bs-placement="top" title="sign in with google">
+                <i class="bi bi-google"></i></button> 
+  
+                <button type="button" class="btn btn2" data-bs-toggle="tooltip" data-bs-placement="top" title="sign in with facebook">
+                    <i class="bi bi-facebook"></i></button> 
+                
+                    <button type="button" class="btn btn3" data-bs-toggle="tooltip" data-bs-placement="top" title="sign in with twitter">
+                        <i class="bi bi-twitter"></i></button> 
+                
+                </p>
+                <hr>
+                <p>Or using from below</p>
+                <form (ngSubmit)="submit()" [formGroup]="form">
+                    <div class="mb-5">
+                      <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" [ngClass]="{'is-invalid':submitted && f['email'].errors}" placeholder="Email" aria-describedby="emailHelp">
+                      <div class="invalid-feedback" *ngIf="submitted && f['email'].errors">
+                        <div *ngIf=" f['email'].errors['required']">
+                            Please Enter your Email
+                        </div>
+                        <div *ngIf=" f['email'].errors['email']">
+                            Email must be a valid email address
+                        </div>
+                      
+                    </div>
+                    </div>
+                    <div class="mb-5 input-group">
+                    
+                      <input [type]="show?'text':'password'" class="form-control" formControlName="password"  placeholder="Password" [ngClass]="{'is-invalid':submitted && f['password'].errors}" id="exampleInputPassword1">
+                       <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i
+                            class="fa"
+                            [ngClass]="{
+                              'fa-eye-slash': !show,
+                              'fa-eye': show
+                            }"
+                            (click)="showpass()"
+                          ></i>
+                        </span>
+                      </div>
+                       <div class="invalid-feedback" *ngIf="submitted && f['password'].errors">
+                        <div *ngIf=" f['password'].errors['required']">
+                            Please Enter your Password
+                        </div>
+                        <div *ngIf=" f['password'].errors['minlength']">
+                              Password must be at least 8 characters
+                        </div>
+                      
+                    </div>
+                    </div>
+                    <div class="mb-5 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                      <a class="float-end" style="color:  #464E2E;text-decoration: none;" [routerLink]="['/forgetpassword']">forgetpassword?</a>
+                      <hr>
+                      
+                    </div>
+                    <span><a class="redirect" [routerLink]="['/register']">Don't have an account?</a></span> <button type="submit" style="background-color: #464E2E;color: white;" class="btn  float-end"><i class="bi bi-box-arrow-in-right"></i> Sign in</button>
+                  </form>
+        </div>
+
+    </div>
+
+   </div> 
+

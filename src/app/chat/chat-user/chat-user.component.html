@@ -1,0 +1,95 @@
+
+
+
+<app-loading *ngIf="showSppiner" ></app-loading>
+<div class="container mt-4" style="min-height: 100vh; position: relative; ">
+  <div class="card mx-auto chat-header">
+        <div class="card-header chat-header-color">
+            <div class="navbar navbar-expand p-0">
+                <ul class="navbar-nav me-auto align-items-center">
+                    <li class="nav-item">
+                        <a  class="nav-link">
+                            <div class="position-relative image-chat">
+                                <img src="http://127.0.0.1:8000/storage/images/{{receiver.image}}" width="100%" height="100%"
+                                    class=" rounded-circle" alt="">
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">{{receiver.username}}</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a  class="nav-link">
+                            <i [routerLink]="['/message']" class="fas fa-times"></i>
+                        </a>
+                    </li>
+                </ul>
+              </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="card-body p-4 mgOne"  >
+
+
+           <div *ngFor="let message of messages">
+            <div class="d-flex align-items-baseline text-end justify-content-end mb-4" *ngIf="message.senderID == senderID">
+                <div class="pe-2">
+                    <div>
+                        <div class="card card-text d-inline-block p-2 px-3 m-1">{{message.body}}</div>
+                    </div>
+
+                    <!-- <div>
+                        <div class="small">01:13PM</div>
+                    </div> -->
+                </div>
+                <div class="position-relative avatar">
+                    <img src="http://127.0.0.1:8000/storage/images/{{sender.image}}" width="100%" height="100%"
+                        class="rounded-circle" alt="">
+                </div>
+            </div>
+
+
+            <div class="d-flex align-items-baseline text-end justify-content-start mb-4" *ngIf="message.senderID != senderID">
+              <div class="position-relative avatar">
+                <img src="http://127.0.0.1:8000/storage/images/{{receiver.image}}" width="100%" height="100%"
+                    class="rounded-circle" alt="">
+            </div>
+
+              <div class="pe-2">
+                    <div>
+                        <div class="card card-text d-inline-block p-2 px-3 m-1">{{message.body}}</div>
+                    </div>
+
+                    <!-- <div>
+                        <div class="small">01:13PM</div>
+                    </div> -->
+                </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="card-footer bg-white position-absolute w-100 bottom-0 m-0 p-1">
+            <div class="input-group">
+
+                <input type="text" #messageInput class="form-control border-0" placeholder="Write a message...">
+                <div class="input-group-text bg-transparent border-0">
+                    <button class="btn btn-light text-secondary" (click)="sendMessage(messageInput.value)">
+                        <i class="bi bi-send-fill"></i> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

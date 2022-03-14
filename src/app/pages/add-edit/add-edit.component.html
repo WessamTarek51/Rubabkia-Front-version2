@@ -1,0 +1,92 @@
+
+
+    <div class="container" >
+
+      <form class="form"    #productform="ngForm" (ngSubmit)="onSubmit(productform)">
+        <div class="form-group">
+        <div class="form-group">
+          <label for="">  name</label>
+
+          <input required ngModel class="form-control" type="text" name="name" #pname="ngModel" minlength="5"  [ngClass]="{'invalid': pname.invalid && pname.touched}"  [(ngModel)]="product.name" >
+
+          <p class="imgerr" *ngIf="pname.invalid && pname.touched && pname.errors?.['required']  ">name is required</p>
+          <p class="imgerr" *ngIf="pname.invalid && pname.touched && pname.errors?.['minlength']">name Should be more than 5 character</p>
+
+          <label for="">Description</label>
+          <textarea required ngModel class="form-control" name="description"  #Description="ngModel" id="" cols="30" rows="4"  minlength="15" [(ngModel)]="product.description"></textarea>
+          <p class="imgerr" *ngIf="Description.invalid && Description.touched && Description.errors?.['minlength']">Description Should be more than 15 character</p>
+          <p class="imgerr" *ngIf="Description.invalid && Description.touched && Description.errors?.['required'] ">Description is required</p>
+          </div>
+           <div class="form-group">
+    <label for="">Price</label>
+     <input required  class="form-control" ngModel  type="number"  #price="ngModel" name="price"  [min]="5"  [ngClass]="{'invalid': pname.invalid && pname.touched}" [(ngModel)]="product.price" >
+     <p class="imgerr" *ngIf="price.invalid && price.touched && price.errors?.['required']">price  is required</p>
+     <p class="imgerr" *ngIf="price.invalid && price.touched && price.errors?.['min']">price Should be more than 5$</p>
+
+     <label for="">Category</label>
+     <select required  ngModel #category="ngModel"  class="form-control" name="category_id"
+      [ngClass]="{'invalid': category.invalid && category.touched}"   [(ngModel)]="product.category"
+     >
+       <option *ngFor="let category of categoryArray" [value]="category.id" > {{ category.name }} </option>
+
+     </select>
+      <div class="imgerr" *ngIf="category.invalid && category.touched &&category.errors?.['required']"> category is required.</div>
+          </div>
+
+
+         <div class="form-group">
+
+
+          <div *ngIf="editMode">
+            <br>
+            <img src="http://127.0.0.1:8000/public/products/{{product.image}}" style="width:25%; height: 30%;">
+
+            <button   class="btnimges" type="button"  #btnimages  onclick="document.getElementById('getFile').click()">
+              select images </button>
+           <input  type='file' name="image" (change)="uploadImage($event)"
+           class="form-control imageInput"
+            ngModel #image="ngModel"
+           id="getFile" style="display:none"  [(ngModel)]="product.image"
+           [ngClass]="{'invalid': image.invalid && image.touched}"
+           >
+            <br>
+          </div>
+          <div *ngIf="!editMode">
+            <br>
+            <button   class="btnimges" type="button"  #btnimages  onclick="document.getElementById('getFile').click()">
+              select images </button>
+              <input  required type='file' name="image" (change)="uploadImage($event)"
+              class="form-control imageInput"
+               ngModel #image="ngModel"
+              id="getFile" style="display:none"  [(ngModel)]="product.image"
+              [ngClass]="{'invalid': image.invalid && image.touched}"
+              >
+            <br>
+          </div>
+
+
+
+          <!-- <div class="imgerr" *ngIf="submitted && f.image.errors" class="invalid-feedback">
+
+            <div *ngIf=" f.image.errors.required">images is required.</div>
+          </div> -->
+
+       <!-- <div style="color:red"
+    *ngIf="image.errors && (image.dirty || image.touched)">
+    <p *ngIf="image.errors?.['required']">
+        Course Name is required
+    </p> -->
+<!-- </div> -->
+        </div>
+
+          <div class="form-group btns" >
+                        <button href="#" class="btnCancel" routerLink="">Cancel</button>
+                        <button   type="submit"  class="btnAdd" [disabled]="!productform.valid" >{{editMode?'Edit':'Add'}}</button>
+          </div>
+          </div>
+      </form>
+      </div>
+
+
+
+      <!--  -->

@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pacifico', cursive;
+}
+
+
+
+
+
+
+.col-6{
+  /* flex-basis: 50%;
+   min-width: 300px;
+   padding: 0;
+   margin: 0; */
+   /* padding-right: 100px; */
+}
+.text{
+  /* background-color: #6a6b66; */
+  height: 50vh;
+  width: 100%;
+  padding: 30px 0 0 30px;
+  /* opacity: 0.2; */
+  color: #fff;
+  background: rgba(4, 4, 4, 0.7);
+
+
+}
+.scriptt{
+  /* background: rgba(4, 4, 4, 0.7); */
+  /* opacity: 0.2; */
+  padding-top: 150px;
+  /* margin-top: 90px;
+  color: #fff;
+  padding-top: 90px; */
+  /* top: 90px; */
+  /* font-weight: 800; */
+    /* font-weight: bolder;
+    background-color: #6b7943;
+    height: 50vh; */
+
+  /* color: #3f4b26; */
+}
+.col-6 img{
+  max-width: 100%;
+  /* padding: 50px 0; */
+}
+
+.btn1{
+  display: inline-block;
+  /* background-color: #fe696a;; */
+  background-color: #474F2F;
+  color: #fff;
+  padding: 8px 35px;
+  margin: 30px;
+  border-radius: 10px;
+  transition: background 0.5s;
+}
+.btn1:hover{
+  /* background: #2351; */
+}
+
+
+
+.small-container{
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+
+
+}
+
+
+/* ............. producrs......... */
+
+/* .products{
+  position: relative;
+} */
+
+
+.col-md-3{
+  /* flex-basis: 25%; */
+  /* min-width: 300px; */
+  margin-bottom: 50px;
+  padding: 10px;
+  transition: transform 0.5s;
+
+
+}
+.col-md-3 img{
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.col-md-3:hover{
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.overlay-iconss{
+  /* align-items: flex-start; */
+  text-align: right;
+  justify-content: right;
+  font-size: 15px;
+  color: #000;
+  padding-left: 140px;
+
+}
+.overlay-iconss i{
+  /* color: #000; */
+  color: #474F2F;
+
+}
+.pri-ic{
+  display: flex;
+
+}
+.overlay-icons button{
+  width: 35%;
+  font-size: 12px;
+  height: 7vh;
+  background-color: black;
+  color: cornsilk;
+  margin: 0 10px;
+  padding-bottom: 10px;
+  border-radius: 10%;
+}
+@media only screen and (max-width: 600px){
+  .row{
+      text-align: center;
+  }
+  .col6{
+      flex-basis: 100%;
+  }
+}
+
+
+
+.products{
+  color: #474F2F;
+}
+
+
+
+
+
+.pagination li a{
+  color: #3f4b26;
+}

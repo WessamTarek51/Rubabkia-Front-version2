@@ -1,0 +1,47 @@
+
+.container {
+  width: 40% !important;
+  height: 40% !important ;
+  margin: 2% auto;
+background-color: #ACB992;
+  box-shadow: 8px 8px #474F2F;
+   border-radius: 8px;
+   padding: 2%;
+ }
+
+ label {
+   /* text-shadow: 2px 2px 5px #474F2F; */
+    color: #474F2F;
+   font-size: 17px;
+   font-weight: bolder;
+   margin:1% 0 ;
+ }
+ .btnCancel,
+ .btnAdd {
+   background-color: #474F2F;
+   padding: 4% 8%;
+    margin:0 1% 1% 0%;
+   border-radius: 8px;
+   color: #ACB992;
+   font-weight: bolder;
+ }
+ .btns{
+   margin-left: 30%;
+
+ }
+.btnimges{
+  color: #ACB992;
+    background-color: #474F2F;
+   border-color: transparent;
+   margin: 3% 0% 4% 0;
+    width: 45% !important;
+   text-align: center;
+   border-radius: 8px;
+   display:block;
+   height:40px;
+   font-weight: bolder;
+}
+.imgerr{
+  padding-bottom:3%;
+  color: brown;
+}

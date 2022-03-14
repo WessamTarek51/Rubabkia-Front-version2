@@ -1,0 +1,56 @@
+<div class="profile-page">
+  <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
+  <div class="main main-raised">
+      <div class="profile-content">
+          <div class="container"  >
+              <div class="row">
+                  <div class="col-12" *ngIf="userData" >
+                     <div class="profile">
+                          <div class="avatar">
+          <img src="http://127.0.0.1:8000/storage/images/{{userData.image}}" style="height:180px!important;width:100%!important;"  alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                          </div>
+                          <div class="name">
+                              <h3 class="title">  {{userData.username}}    </h3>
+                              <h6 class="title"> {{userData.phoneNumber}} - {{userData.address}}</h6>
+                              <button type="button" class="bb btn" [routerLink]="['/chat/',userData.id]" > Message</button>
+
+                              <br>
+                              <br>
+
+                              <hr>
+                              <br>
+                          </div>
+                  </div>
+              </div>
+          </div>
+
+
+
+      <div class="products">
+        <div class="small-container">
+          <h2><i class="bi bi-bag-check-fill"></i>Products</h2>
+        <br>
+         <br>
+          <div class="row" *ngIf="userData">
+            <div class="col-md-3 col-sm-6"   *ngFor="let product of userData.products" >
+            <img src="http://127.0.0.1:8000/public/products/{{product.image}}" style="height:250px!important;width:100%!important;" />
+              <h4>{{product.name}}</h4>
+              <div class="pri-ic">
+                <p>{{product.price}}</p>
+                <div class="overlay-iconss">
+                  <a [routerLink]="['/show',product.id]" style="--i:1"><i class="fa fa-eye"></i></a>
+                   <a style="--i:3" ><i   [ngClass]="{'bi bi-suit-heart-fill':product.isFav,'bi bi-suit-heart':!product.isFav}" (click)="changFav(product)"></i> </a>
+                   <!-- <a [routerLink]="['profile',product.id]"  (click)="AddPruchases(product)"><i class="bi bi-bag-check-fill"></i></a> -->
+                   <a   (click)="buyProduct(product)"><i class="bi bi-bag-check-fill"></i></a>
+
+               </div>
+               </div>
+              </div>
+            </div>
+
+
+</div>
+</div>
+</div>
+
+
